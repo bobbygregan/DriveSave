@@ -40,8 +40,23 @@
     <script src="js/bootstrap.min.js"></script>
 
           <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.25/angular.min.js"></script>
-          <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.25/angular-route.js"></script>
+          <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.25/angular-route.js"></script>
+           <script src="https://www.gstatic.com/firebasejs/3.6.1/firebase.js"></script>
+           <script src="https://cdn.firebase.com/libs/angularfire/2.1.0/angularfire.min.js"></script>
+
+<script type="text/javascript">// Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyCUkYdqM55uH2EZ86l6xKjrNcpmtVxY9rg",
+    authDomain: "serviceapp-ad006.firebaseapp.com",
+    databaseURL: "https://serviceapp-ad006.firebaseio.com",
+    storageBucket: "",
+    messagingSenderId: "907715762501"
+  };
+  firebase.initializeApp(config); </script>
+
           <script src="app.js"></script>
+          <script src="controller.js"></script>
+
 
 
     <!-- Menu Toggle Script -->
@@ -51,6 +66,12 @@
         $("#wrapper").toggleClass("toggled");
     });
     </script>
+     <script>  var app = angular.module('Serviceapp', [
+    'ngRoute',
+    'firebase',
+]);
+
+</script>
 
 </body>
 

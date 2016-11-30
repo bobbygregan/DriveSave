@@ -4,9 +4,36 @@
 	height: 200px;
 	border:5px solid black;
 }
-#facebook_button {
-width:200px
-height:200px
-border:5px solid black;
-color:blue;
+
+#Facebook {
+background-color:blue;
+color:black;
+display: inline-block;
+} 
+#Gmail{
+background-color:red; 
+color:black;
+display:inline-block;
+
+}
+#Github{
+	background-color:green;
+	color:black;
+ border-color: solid black;
+ display: inline-block;
+
+}
+.drivesave_header{ 
+	background-color: darkblue; 
+	color: white;
+}
+.container-form{
+	padding-top:20px;
+}
+.form-input{
+	margin-bottom: 20px;
+}
+
+#login.html 
+background-color: darkblue;
 }
