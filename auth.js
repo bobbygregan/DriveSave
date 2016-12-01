@@ -20,6 +20,10 @@ angular.module('myApp').factory('Auth', function($firebaseAuth, $firebaseObject)
             return auth.$signInWithPopup("facebook");
         },
 
+        loginWithGmail: function() {
+            return auth.$signInWithPopup("google");
+        },
+
         isLoggedIn: function() {
             return Auth.user != {};
         },

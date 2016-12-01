@@ -7,28 +7,51 @@ app.config(function($routeProvider) {
     })  
      .when("/login", {
          templateUrl : "templates/login.html",
-         controller : "LoginController"
-    })
+         controller : "LoginController",
+         resolve: {
+            AuthWaitForLogged: function(Auth) {
+                return Auth.getAuth().$waitForSignIn();
+            }
+        }
+   })
     .when("/experience", {
         templateUrl : "templates/experience.html",
-        controller : 'ExperienceController'
+        controller : 'ExperienceController',
+        resolve: {
+            AuthWaitForLogged: function(Auth) {
+                return Auth.getAuth().$waitForSignIn();
+            }
+        }
     })
     .when("/Contact", {
-        templateUrl : "templates/Contact.html"
+        templateUrl : "templates/dealerships.html",
+        controller : "DealershipController",
     })
     .when("/Used", {
         templateUrl : "templates/Used.html",
-        controller : "UsedController"
+        controller : "UsedController",
+        resolve: {
+            AuthWaitForLogged: function(Auth) {
+                return Auth.getAuth().$waitForSignIn();
+            }
+        }
+    })
+     .when("/dealership/:did", {
+        templateUrl : "templates/dealership.html",
+        controller : "ViewDealershipController",
+        resolve: {
+            AuthWaitForLogged: function(Auth) {
+                return Auth.getAuth().$waitForSignIn();
+            }
+        }
     })
     .when("/Brands", {
         templateUrl : "templates/main.html"
-    });   
+    })  
+
+$('.edit_btn').on('click', function(e){
+    console.log('click');
+    e.preventDefault();
+});
+
 });   
-// .state("/login", {
-//          templateUrl : "templates/login.html",
-//          controller : "LoginController"
-// })
-// .state(("/login", {
-//          templateUrl : "templates/login.html",
-//          controller : "LoginController"
-// })
