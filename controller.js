@@ -1,6 +1,5 @@
 angular.module('myApp').controller('ExperienceController', function($scope,Auth, AuthWaitForLogged,Dealership) {
 	$scope.submitstory = function(){
-		alert('heyboooby');
 		console.log($scope.yourstory);
 		$("#addExperiencemodal").modal('show');
 	}

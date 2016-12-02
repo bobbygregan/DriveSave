@@ -7,6 +7,8 @@
 <div class='drivesave_header row'>
   <div class='col-sm-12'>
    <h1><em>Share Your Story</em></h1>
+   <h3> Your Story, will be placed on the contact page for others to view!</h3>
+   <h4>Please leave a rating after your story. Rate 1-10.
   </div> 
 </div> 
 
@@ -21,6 +23,7 @@
       <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
         <h4 class="modal-title">Add Your Story</h4>
+
       </div>
       <div class="modal-body">
           <textarea class='form-control form-input' ng-model='newExperience.msg' placeholder="Type a message..." rows="10" cols="40" name="message"></textarea>
@@ -31,7 +34,7 @@
     <input type="text" class="form-control modal-form" ng-model="newExperience.ServiceDepartment" placeholder="Service Department">
      
         <input type="text" class="form-control modal-form" ng-model="newExperience.OverallExperience" placeholder="Overall Experience">
-    <input type="text" class="form-control modal-form" ng-model="newExperience.YourPrice" placeholder="Your Price">
+    <input type="text" class="form-control modal-form" ng-model="newExperience.YourPrice" placeholder="Your Price/Model">
       </div>
       <div class="modal-footer">
         <button class="btn btn-lg btn-block btn-success" ng-click="addExperience(newExperience)">
@@ -41,7 +44,7 @@
       </div>
     </div><!-- /.modal-content -->
   </div><!-- /.modal-dialog -->
-</div><
+</div>
 
 <div id="editDealershipmodal" class="modal fade" tabindex="-1" role="dialog">
   <div class="modal-dialog" role="document">
@@ -55,7 +58,7 @@
     <input type="text" class="form-control modal-form" ng-model="editExperience.ServiceDepartment" placeholder="Service Department">
      
         <input type="text" class="form-control modal-form" ng-model="editExperience.OverallExperience" placeholder="Overall Experience">
-    <input type="text" class="form-control modal-form" ng-model="editExperience.YourPrice" placeholder="Your Price">
+    <input type="text" class="form-control modal-form" ng-model="editExperience.YourPrice" placeholder="Your Price/Model">
       </div>
       <div class="modal-footer">
         <button class="btn btn-lg btn-block btn-success" ng-click="updateExperience()">
@@ -65,6 +68,6 @@
       </div>
     </div><!-- /.modal-content -->
   </div><!-- /.modal-dialog -->
-</div><
+</div>
      
       
