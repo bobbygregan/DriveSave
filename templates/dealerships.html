@@ -8,7 +8,7 @@
 <h1>DealerShips</h1>
 </header>
 <div style="border-width: : 5px solid black"></div>
-	<button class="btn btn-block btn-warning" ng-click="showAddDealership()">Add Dealership</button>
+	<button ng-click="showAddDealership()">Add Dealership</button>
 	<div> 
 	 <ul ng-repeat="dealership in dealershipList"> 
 
@@ -18,7 +18,7 @@
 			<div style='color:black'>
 				<h3><a href='#/dealership/{{dealership.$id}}'>{{dealership.address}}</a> <span ng-click="showEditDealership(dealership.$id)">(edit)</span></h3>
 			</div>
-			<a style='color:lightgrey' href='{{dealership.url}}'>{{dealership.name}}</a>
+			<a style='color:black' href='{{dealership.url}}'>{{dealership.name}}</a>
 		</li>
 
 	 </ul>
