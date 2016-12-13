@@ -8,7 +8,7 @@
     <meta name="viewport" content="width=device-width, shrink-to-fit=no, initial-scale=1">
     <meta name="description" content="">
     <meta name="author" content="">
-    <link href="css/app.css" rel="stylesheet">
+    
 
     <title>Drive Save</title>
 
@@ -17,6 +17,7 @@
 
     <!-- Custom CSS -->
     <link href="css/simple-sidebar.css" rel="stylesheet">
+    <link href="css/app.css" rel="stylesheet">
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -28,7 +29,9 @@
 </head>
 
 <body ng-app="myApp">
-    <div ng-view></div>
+<div ng-include="'templates/partials/nav.html'"></div>
+<div ng-view></div> 
+
 
         
     <!-- /#wrapper -->
@@ -52,12 +55,15 @@
     storageBucket: "",
     messagingSenderId: "907715762501"
   };
+  
   firebase.initializeApp(config); </script>
+
 
           <script src="app.js"></script>
           <script src="controller.js"></script>
           <script src="auth.js"></script>
            <script src="Dealership.js"></script>
+           <script src="Uses.js"></script>
 
 
 
@@ -66,6 +72,7 @@
     $("#menu-toggle").click(function(e) {
         e.preventDefault();
         $("#wrapper").toggleClass("toggled");
+
     });
     </script>
 

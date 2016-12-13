@@ -27,6 +27,12 @@ app.config(function($routeProvider) {
         templateUrl : "templates/dealerships.html",
         controller : "DealershipController",
     })
+
+    .when("/Used Section", {
+        templateUrl : "templates/use.html",
+        controller : "UsesController",
+    })
+
     .when("/Used", {
         templateUrl : "templates/Used.html",
         controller : "UsedController",
@@ -45,13 +51,25 @@ app.config(function($routeProvider) {
             }
         }
     })
-    .when("/Brands", {
+     .when("/uses", {
+        templateUrl : "templates/use.html",
+        controller : "ViewUsesController",
+        resolve: {
+            AuthWaitForLogged: function(Auth) {
+                return Auth.getAuth().$waitForSignIn();
+            }
+        }
+    })
+    .when("/DriveSave", {
         templateUrl : "templates/main.html"
+        // controller : "DriveSave"
     })  
 
 $('.edit_btn').on('click', function(e){
     console.log('click');
     e.preventDefault();
 });
+
+
 
 });   

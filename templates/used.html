@@ -1,66 +1,73 @@
 
 
-
+<div class="container" class='mainbody'> 
+<div id="page-content-wrapper" class='mainbody'>
 <div class='drivesave_header row'>
   <div class='col-sm-12'>
    <h1><em>Used</em></h1>
+   <h3> Your Used, will be placed on the Used Car page for others to view!</h3>
+   <h4>Please leave your Used</h4>
   </div> 
 </div> 
+<hr>
 
-            <button class='btn btn-primary btn-block' ng-click='submitstory()'>Submit</button>
-   </div>
-  </div>
-</div> 
+<button id='usedbtn' ng-click='submitused()'>Submit Used</button>
+   
 
-<div id="addUsedmodal" class="modal fade" tabindex="-1" role="dialog">
+<div id="addUsedemodal" class="modal fade" tabindex="-1" role="dialog">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-        <h4 class="modal-title">Add a Dealership</h4>
+        <h4 class="modal-title">Add Your Story</h4>
+
       </div>
       <div class="modal-body">
-          <textarea class='form-control form-input' ng-model='yourstory.msg' placeholder="Type a message..." rows="10" cols="40" name="message"></textarea>
-
-        <input type="text" class="form-control modal-form" ng-model="newDealership.name" placeholder="Dealership Name">
-    <input type="text" class="form-control modal-form" ng-model="newDealership.address" placeholder="Dealership Address">
+      <div id='experience'>
+          <textarea class='form-control form-input' ng-model='newUsed.msg' placeholder="Type a message..." rows="10" cols="40" name="message"></textarea>
+           <select class= 'form-control' ng-model= 'newUsed.uses'> 
+            <option ng-repeat='uses in use' value='{{uses.$id}}'>{{uses.name}}</option>
+           </select>
+        <input type="text" class="form-control modal-form" ng-model="newUsed.name" placeholder="Car name">
+    <input type="text" class="form-control modal-form" ng-model="newUsed.Year" placeholder="Year">
      
-        <input type="text" class="form-control modal-form" ng-model="newDealership.phone" placeholder="Dealership Phone#">
-    <input type="text" class="form-control modal-form" ng-model="newDealership.url" placeholder="Dealership URL">
+        <input type="text" class="form-control modal-form" ng-model="newUsed.km" placeholder="km">
+    <input type="text" class="form-control modal-form" ng-model="newUsed.YourPrice" placeholder="Your Price">
+    </div>
       </div>
       <div class="modal-footer">
-        <button class="btn btn-lg btn-block btn-success" ng-click="addDealership(newDealership)">
+        <button class="btn btn-lg btn-block btn-success" ng-click="addUsed(newUsed)">
       Submit
     </button>
      </div>
       </div>
     </div><!-- /.modal-content -->
   </div><!-- /.modal-dialog -->
-</div><
+</div>
 
-<div id="editDealershipmodal" class="modal fade" tabindex="-1" role="dialog">
+<div id="editUsepmodal" class="modal fade" tabindex="-1" role="dialog">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-        <h4 class="modal-title">edit a Dealership</h4>
+        <h4 class="modal-title">edit Your Story</h4>
       </div>
       <div class="modal-body">
-        <input type="text" class="form-control modal-form" ng-model="editDealership.name" placeholder="Dealership Name">
-    <input type="text" class="form-control modal-form" ng-model="editDealership.address" placeholder="Dealership Address">
+        <input type="text" class="form-control modal-form" ng-model="editUsed.name" placeholder="Car name">
+    <input type="text" class="form-control modal-form" ng-model="editUsed.Year" placeholder="Year">
      
-        <input type="text" class="form-control modal-form" ng-model="editDealership.phone" placeholder="Dealership Phone#">
-    <input type="text" class="form-control modal-form" ng-model="editDealership.url" placeholder="Dealership URL">
+        <input type="text" class="form-control modal-form" ng-model="editUsed.km" placeholder="km">
+    <input type="text" class="form-control modal-form" ng-model="editUsed.YourPrice" placeholder="Your Price/Model">
       </div>
       <div class="modal-footer">
-        <button class="btn btn-lg btn-block btn-success" ng-click="updateDealership()">
+        <button class="btn btn-lg btn-block btn-success" ng-click="updateUsed()">
       edit
     </button>
      </div>
       </div>
     </div><!-- /.modal-content -->
   </div><!-- /.modal-dialog -->
-</div><
+</div>
 
 
 

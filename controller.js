@@ -10,17 +10,7 @@ angular.module('myApp').controller('ExperienceController', function($scope,Auth,
 	}
 }); 
 
-angular.module('myApp').controller('UsedController', function($scope,Auth, AuthWaitForLogged) {
-	$scope.submitstory = function(){
-		alert('heyboooby');
-		console.log($scope.submitstory);
-		$("#addUsedmodal").modal('show');
-	}
 
-
-
-
-}); 
 angular.module('myApp').controller('ViewDealershipController', function($scope,Auth, AuthWaitForLogged, Dealership,$routeParams) {
 	console.log($routeParams.did);
 
@@ -56,12 +46,57 @@ angular.module('myApp').controller('DealershipController', function($scope,Deale
 	};
 
 }); 
-// angular.module('myApp'). controller('Button clicked',
-//  function($scope){
-// 	$scope.ButtonClick = function(hide){ 
-// 		$scope.Message = 'Button clicked.' 
-// 	} 
-// }); 
+angular.module('myApp').controller('UsedController', function($scope,Auth, AuthWaitForLogged,Uses) {
+	$scope.submitused = function(){
+		console.log($scope.submitused);
+		$("#addUsedemodal").modal('show');
+	}
+$scope.use = Uses.getUse();
+
+	$scope.addUsed = function(newused){
+		Uses.addUsed(newused).then(function(newUsed) {
+			$("#addUsedemodal").modal('hide');
+		});
+
+	}
+}); 
+
+angular.module('myApp').controller('ViewUsesController', function($scope,Auth, AuthWaitForLogged, Uses,$routeParams) {
+	console.log($routeParams.did);
+
+	// $scope.uses = Uses.getUses();
+	$scope.useList = Uses.getUsed();
+}); 
+
+angular.module('myApp').controller('usesController', function($scope,Uses) {
+	$scope.useList = use.getuse();
+	$scope.showAdduses = function(){
+		$("#adduses").modal('show');
+	} 
+	$scope.showEdituses = function(uses_id){
+		$scope.edituse = Use.getUse(use_id);
+		console.log($scope.editUse);
+		$("#editusemodal").modal('show');
+	} 
+
+	$scope.addused = function(newuses) {
+		Dealership.addUses(newUse).then(function() {
+			$("#addusemodal").modal('hide');
+		});
+		console.log('fuckshitfuck');
+	}; 
+	$scope.getuses = function() {
+		return Uses.uses;
+	}
+
+	$scope.updateuses = function() {
+		Uses.saveuses($scope.edituse).then(function() {
+			$("#editmodal").modal('hide');
+		});
+	};
+
+}); 
+
 
 angular.module('myApp').controller('LoginController', function($scope, Auth, AuthWaitForLogged) {
 
@@ -108,3 +143,8 @@ angular.module('myApp').controller('LoginController', function($scope, Auth, Aut
 		});
 	};
 });
+
+// angular.module('myApp').controller('DriveSaveController', function($scope,DriveSave){
+// 	$scope.DriveSave= function()
+// 	// $("main.html")('show');
+// });

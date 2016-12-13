@@ -5,24 +5,36 @@
 	border:5px solid black;
 }
 
-#Facebook {
-background-color:blue;
-color:black;
-display: inline-block;
-} 
-#Gmail{
-background-color:red; 
-color:black;
-display:inline-block;
+#experience{
+	border-spacing: 500px
+}
 
-}
-#Github{
-	background-color:green;
-	color:black;
- border-color: solid black;
- display: inline-block;
 
+table, th, td {
+    height: 50px;
+    vertical-align: bottom;
 }
-#experience.html{
-	background-color: darkblue
-}
+                                
+    }
+    th,td{
+        text-align: center;
+    } 
+
+    .btn-btn-default{text-align: right
+        } 
+
+
+        #main.html
+        {text-overflow: right;
+        }
+        .mainbody{
+        	padding-left: 250px !important
+        }
+        #usedbtn{ 
+        	border-width: 60% !important
+
+        }
+        #page-content-wrapper
+        { border:  1px solid black;
+
+        }

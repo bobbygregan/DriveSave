@@ -63,6 +63,8 @@ angular.module('myApp').controller('LoginController', function($scope, Auth, Aut
 
         Auth.logout().then(function() {
             $scope.isLoggedIn = false;
+            $ npm install -g firebase-tools
+
         });
     };
 });
