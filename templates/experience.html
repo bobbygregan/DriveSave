@@ -4,11 +4,11 @@
 
 
 
-  <div id="page-content-wrapper" class='mainbody'>
+  <div id="experiencewrap" class='mainbody'>
 <div class='drivesave_header row' >
   <div class='col-sm-12'>
    <h1><em>Share Your Story</em></h1>
-   <h3> What we hope is that you share your experience buying at a local dealership, will help others with thier own purchases.Your Story, will be placed on the contact page for others to view!</h3>
+   <h3> What we hope is that you share your experience buying at a local dealership. This will help others with thier own purchases.Your Story, will be placed on the contact page for others to view!</h3>
    <h4>Please leave a rating after your story. Rate 1-10.</h4>
   </div> 
 </div> 
@@ -30,10 +30,9 @@
            <select class= 'form-control' ng-model= 'newExperience.dealership'> 
             <option ng-repeat='dealership in dealerships' value='{{dealership.$id}}'>{{dealership.name}}</option>
            </select>
-        <input type="text" class="form-control modal-form" ng-model="newExperience.SalesPerson" placeholder="Sales Person">
-    <input type="text" class="form-control modal-form" ng-model="newExperience.ServiceDepartment" placeholder="Service Department">
-     
-        <input type="text" class="form-control modal-form" ng-model="newExperience.OverallExperience" placeholder="Overall Experience">
+        <input type="text" class="form-control modal-form" ng-model="newExperience.SalesPerson" placeholder="Sales Person 1-10">
+      <input type="text" class="form-control modal-form" ng-model="newExperience.ServiceDepartment" placeholder="Service Department 1-10">
+     <input type="text" class="form-control modal-form" ng-model="newExperience.OverallExperience" placeholder="Overall Experience1-10">
     <input type="text" class="form-control modal-form" ng-model="newExperience.YourPrice" placeholder="Your Price/Model">
     </div>
       </div>

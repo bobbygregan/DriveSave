@@ -25,11 +25,11 @@
       <div id='used'>
           <textarea class='form-control form-input' ng-model='newUsed.msg' placeholder="Type a message..." rows="10" cols="40" name="message"></textarea>
            <select class= 'form-control' ng-model= 'newUsed.uses'> 
-            <option ng-repeat='uses in use' value='{{uses.$id}}'>{{uses.name}}</option>
+            <option ng-repeat='uses in use' value='{{uses.$id}}'>{{uses.name}} {{vehicle.Contactinfo}}</option>
            </select>
         <input type="text" class="form-control modal-form" ng-model="newUsed.name" placeholder="Car name">
     <input type="text" class="form-control modal-form" ng-model="newUsed.Year" placeholder="Year">
-     
+      <input type="text" class="form-control modal-form" ng-model="newUse.Contact" placeholder="Vehicle Contact Info">
         <input type="text" class="form-control modal-form" ng-model="newUsed.km" placeholder="km">
     <input type="text" class="form-control modal-form" ng-model="newUsed.YourPrice" placeholder="Your Price">
     </div>
@@ -53,8 +53,8 @@
       </div>
       <div class="modal-body">
         <input type="text" class="form-control modal-form" ng-model="editUsed.name" placeholder="Car name">
-    <input type="text" class="form-control modal-form" ng-model="editUsed.Year" placeholder="Year">
-     
+         <input type="text" class="form-control modal-form" ng-model="editUsed.Year" placeholder="Year">
+         <input type="text" class="form-control modal-form" ng-model="editUsed.Contact" placeholder="Contactinfo">
         <input type="text" class="form-control modal-form" ng-model="editUsed.km" placeholder="km">
     <input type="text" class="form-control modal-form" ng-model="editUsed.YourPrice" placeholder="Your Price/Model">
       </div>
