@@ -12,13 +12,14 @@ angular.module('myApp').factory('Uses', function($firebaseArray, $firebaseObject
 			return Uses.use.$add(newUses);
 		},
 
-		getUse: function() {
-			return Uses.use;
+		getUse: function(useid) {
+			var individualUsesRef = UsedRef.child(useid);
+			return $firebaseObject(individualUsesRef);
 		},
 
 		getUses: function() {
-			// var individualUsesRef = UsesRef.child(Uses_id);
-			return $firebaseArray(UsesRef);
+			
+			return Uses.use;
 		},
 		getUsed: function() {
 			// var individualUsesRef = UsedRef.child(Uses_id);
@@ -41,7 +42,7 @@ angular.module('myApp').factory('Uses', function($firebaseArray, $firebaseObject
 		},
 	};
 
-	Uses.use = $firebaseArray(UsesRef);
+	Uses.use = $firebaseArray(UsedRef);
 	console.log(UsesRef);
 	return Uses;
 });

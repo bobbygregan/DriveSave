@@ -5,8 +5,13 @@
 	border:5px solid black;
 }
 
-#experience{
-	border-spacing: 500px
+body {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  padding-left: 50px!important;
+  line-height: 1.42857143;
+  /*color: #0000ff;
+  background-color: #0000ff;*/
 }
 
 
@@ -17,7 +22,8 @@ table, th, td {
                                 
     }
     th,td{
-        text-align: center;
+       height: 50px;
+    vertical-align: bottom;
     } 
 
     .btn-btn-default{text-align: right
@@ -28,13 +34,38 @@ table, th, td {
         {text-overflow: right;
         }
         .mainbody{
-        	padding-left: 250px !important
+        	padding-left: 101px !important
         }
         #usedbtn{ 
         	border-width: 60% !important
 
         }
         #page-content-wrapper
-        { border:  2px solid black;
+        { width:100%!important;
 
         }
+        .close{
+            float: right;
+  margin: 2em 1em 0 1em;
+  width: 10em;
+  padding: .5em;
+  border: 1px solid #666;
+  -moz-border-radius: 10px;
+  -webkit-border-radius: 10px;  
+  border-radius: 10px;
+  -moz-box-shadow: 0 0 .5em rgba(0, 0, 0, .8);
+  -webkit-box-shadow: 0 0 .5em rgba(0, 0, 0, .8);
+  box-shadow: 0 0 .5em rgba(0, 0, 0, .8);
+  color: darkblue;
+  background: #0a0;
+  font-size: 1em;
+  line-height: 1em;
+  font-weight: bold;
+  opacity: .7;
+  -webkit-appearance: none;
+  -moz-transition: opacity .5s;
+  -webkit-transition: opacity .5s;
+  -o-transition: opacity .5s;
+  transition: opacity .5s;
+}
+        

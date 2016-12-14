@@ -51,7 +51,7 @@ angular.module('myApp').controller('UsedController', function($scope,Auth, AuthW
 		console.log($scope.submitused);
 		$("#addUsedemodal").modal('show');
 	}
-$scope.use = Uses.getUse();
+$scope.use = Uses.getUsed();
 
 	$scope.addUsed = function(newused){
 		Uses.addUsed(newused).then(function(newUsed) {
@@ -66,6 +66,12 @@ angular.module('myApp').controller('ViewUsesController', function($scope,Auth, A
 
 	// $scope.uses = Uses.getUses();
 	$scope.useList = Uses.getUsed();
+
+	if ($routeParams.uid!=undefined){
+		$scope.vehicle= Uses.getUse($routeParams.uid);
+	}
+
+
 }); 
 
 angular.module('myApp').controller('usesController', function($scope,Uses) {

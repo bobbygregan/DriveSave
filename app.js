@@ -60,10 +60,19 @@ app.config(function($routeProvider) {
             }
         }
     })
-    .when("/DriveSave", {
-        templateUrl : "templates/main.html"
-        // controller : "DriveSave"
-    })  
+     .when("/uses/:uid", {
+        templateUrl : "templates/uses.html",
+        controller : "ViewUsesController",
+        resolve: {
+            AuthWaitForLogged: function(Auth) {
+                return Auth.getAuth().$waitForSignIn();
+            }
+        }
+    })
+    // .when("/DriveSave", {
+    //     templateUrl : "templates/main.html"
+    //     // controller : "DriveSave"
+    // })  
 
 $('.edit_btn').on('click', function(e){
     console.log('click');
