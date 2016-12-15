@@ -22,6 +22,44 @@ body {
   background-color: #0000ff;*/
 }
 
+#usedemail{
+    width:600px!important;
+    height: 200px!important;
+    border-width: 5px;
+} 
+#usesem{ float: center;
+  margin: 2em 1em 0 1em;
+  width: 10em;
+  padding: .5em;
+  padding-right: 20px;
+  border: 1px solid #666;
+  -moz-border-radius: 10px;
+  -webkit-border-radius: 10px;  
+  border-radius: 10px;
+  -moz-box-shadow: 0 0 .5em rgba(0, 0, 0, .8);
+  -webkit-box-shadow: 0 0 .5em rgba(0, 0, 0, .8);
+  box-shadow: 0 0 .5em rgba(0, 0, 0, .8);
+  color: darkblue;
+  background: #0a0;
+  font-size: 1em;
+  line-height: 1em;
+  font-weight: bold;
+  opacity: .7;
+  -webkit-appearance: none;
+  -moz-transition: opacity .5s;
+  -webkit-transition: opacity .5s;
+  -o-transition: opacity .5s;
+  transition: opacity .5s;
+
+}
+#usedem{
+   
+    border-width: 2px;
+
+}
+
+
+
 
 table, th, td {
     height: 50px;
