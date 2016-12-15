@@ -34,7 +34,7 @@ app.config(function($routeProvider) {
     })
 
     .when("/Used", {
-        templateUrl : "templates/Used.html",
+        templateUrl : "templates/used.html",
         controller : "UsedController",
         resolve: {
             AuthWaitForLogged: function(Auth) {
