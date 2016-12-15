@@ -64,7 +64,7 @@ $scope.use = Uses.getUsed();
 angular.module('myApp').controller('ViewUsesController', function($scope,Auth, AuthWaitForLogged, Uses,$routeParams) {
 	console.log($routeParams.did);
 
-	// $scope.uses = Uses.getUses();
+	$scope.uses = Uses.getUses();
 	$scope.useList = Uses.getUsed();
 
 	if ($routeParams.uid!=undefined){
